@@ -19,12 +19,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "custom_liquid_Q4eMAn": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<style>\n  .star-review-wrapper {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    flex-shrink: 0;\n  }\n\n  .star-icons svg {\n    width: 20px;\n    height: 20px;\n    fill: #CB572A; /* Your deep red color */\n  }\n\n  .review-text {\n    font-size: 16px;\n    font-weight: 500;\n    color: #333;\n    white-space: nowrap;\n  }\n\n  @media (max-width: 480px) {\n    .star-review-wrapper {\n      flex-direction: row;\n      justify-content: center;\n    }\n\n    .review-text {\n      font-size: 15px;\n    }\n  }\n</style>\n\n<div class=\"star-review-wrapper\">\n  <div class=\"star-icons\">\n    <!-- 5 Rounded Stars -->\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n  </div>\n  <div class=\"review-text\">\n    <strong>5</strong> by <strong>194+</strong> Customers\n  </div>\n</div>"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -48,13 +42,13 @@
         "custom_liquid_TJV3Ri": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<section class=\"sale-timer\" aria-label=\"Sale countdown timer\">\n  <style>\n    .sale-timer{\n      width:100%;\n      padding:22px 12px;\n      display:flex;\n      justify-content:center;\n      background:##CB572A;\n      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n    }\n    .sale-timer__wrap{\n      text-align:center;\n    }\n    .sale-timer__label{\n      font-size:24px;\n      font-weight:500;\n      color:#111;\n      margin:0 0 14px 0;\n      line-height:1.1;\n    }\n\n    .sale-timer__row{\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:10px;\n    }\n\n    .sale-timer__box{\n      width:88px;\n      height:68px;\n      background:#CB572A;\n      color:#fff;\n      border-radius:6px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      font-size:34px;\n      font-weight:700;\n      letter-spacing:1px;\n      font-variant-numeric: tabular-nums;\n    }\n\n    .sale-timer__colon{\n      font-size:32px;\n      font-weight:700;\n      color:#ff2a2a;\n      line-height:1;\n      transform: translateY(-1px);\n      user-select:none;\n    }\n\n    @media (max-width:420px){\n      .sale-timer__label{ font-size:20px; }\n      .sale-timer__box{ width:72px; height:58px; font-size:30px; }\n      .sale-timer__colon{ font-size:28px; }\n      .sale-timer__row{ gap:8px; }\n    }\n  </style>\n\n  <div class=\"sale-timer__wrap\">\n    <div class=\"sale-timer__label\">Hurry! Sale ends in</div>\n\n    <div class=\"sale-timer__row\" role=\"timer\" aria-live=\"polite\">\n      <div class=\"sale-timer__box\" id=\"st-hours\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-mins\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-secs\">00</div>\n    </div>\n  </div>\n\n  <script>\n    (function () {\n      const durationHours = 12; // change if needed\n      const endAt = Date.now() + durationHours * 60 * 60 * 1000;\n\n      const h = document.getElementById(\"st-hours\");\n      const m = document.getElementById(\"st-mins\");\n      const s = document.getElementById(\"st-secs\");\n\n      const pad = n => String(n).padStart(2, \"0\");\n\n      function update(){\n        let diff = endAt - Date.now();\n        if(diff < 0) diff = 0;\n\n        const total = Math.floor(diff / 1000);\n        h.textContent = pad(Math.floor(total / 3600));\n        m.textContent = pad(Math.floor((total % 3600) / 60));\n        s.textContent = pad(total % 60);\n\n        if(diff === 0) clearInterval(timer);\n      }\n\n      update();\n      const timer = setInterval(update, 1000);\n    })();\n  </script>\n</section>"
+            "custom_liquid": "<section class=\"sale-timer\" aria-label=\"Sale countdown timer\">\n  <style>\n    .sale-timer{\n      width:100%;\n      padding:22px 12px;\n      display:flex;\n      justify-content:center;\n      background:##CB572A;\n      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n    }\n    .sale-timer__wrap{\n      text-align:center;\n    }\n    .sale-timer__label{\n      font-size:24px;\n      font-weight:500;\n      color:#111;\n      margin:0 0 14px 0;\n      line-height:1.1;\n    }\n\n    .sale-timer__row{\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:10px;\n    }\n\n    .sale-timer__box{\n      width:88px;\n      height:68px;\n      background:#eeadb3;\n      color:#fff;\n      border-radius:6px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      font-size:34px;\n      font-weight:700;\n      letter-spacing:1px;\n      font-variant-numeric: tabular-nums;\n    }\n\n    .sale-timer__colon{\n      font-size:32px;\n      font-weight:700;\n      color:#ff2a2a;\n      line-height:1;\n      transform: translateY(-1px);\n      user-select:none;\n    }\n\n    @media (max-width:420px){\n      .sale-timer__label{ font-size:20px; }\n      .sale-timer__box{ width:72px; height:58px; font-size:30px; }\n      .sale-timer__colon{ font-size:28px; }\n      .sale-timer__row{ gap:8px; }\n    }\n  </style>\n\n  <div class=\"sale-timer__wrap\">\n    <div class=\"sale-timer__label\">Hurry! Sale ends in</div>\n\n    <div class=\"sale-timer__row\" role=\"timer\" aria-live=\"polite\">\n      <div class=\"sale-timer__box\" id=\"st-hours\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-mins\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-secs\">00</div>\n    </div>\n  </div>\n\n  <script>\n    (function () {\n      const durationHours = 12; // change if needed\n      const endAt = Date.now() + durationHours * 60 * 60 * 1000;\n\n      const h = document.getElementById(\"st-hours\");\n      const m = document.getElementById(\"st-mins\");\n      const s = document.getElementById(\"st-secs\");\n\n      const pad = n => String(n).padStart(2, \"0\");\n\n      function update(){\n        let diff = endAt - Date.now();\n        if(diff < 0) diff = 0;\n\n        const total = Math.floor(diff / 1000);\n        h.textContent = pad(Math.floor(total / 3600));\n        m.textContent = pad(Math.floor((total % 3600) / 60));\n        s.textContent = pad(total % 60);\n\n        if(diff === 0) clearInterval(timer);\n      }\n\n      update();\n      const timer = setInterval(update, 1000);\n    })();\n  </script>\n</section>"
           }
         },
         "custom_liquid_H9DXEK": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"padding: 12px; text-align: left; background-color: #f9f9f9; font-size: 15px; border-radius: 12px; margin-top: 10px; margin-bottom: 10px; line-height: 1.6;\">\n\n<span style=\"font-weight: bold;\">✨ Cordless & Rechargeable</span> – Style your hair anywhere without needing an outlet.<br><br>\n\n<span style=\"font-weight: bold;\">🔥 Fast, Even Heating</span> –  Advanced ceramic technology smooths hair quickly with less frizz.<br><br>\n\n<span style=\"font-weight: bold;\">🌡️ Adjustable Heat Settings</span> – Suitable for fine, thick, curly, or treated hair.<br><br>\n\n<span style=\"font-weight: bold;\">💫 Smooth, Tangle-Free Results</span> –  Glides gently through hair for a sleek, shiny finish.\n\n</div>"
+            "custom_liquid": "<div style=\"padding: 12px; text-align: left; background-color: #f9f9f9; font-size: 15px; border-radius: 12px; margin-top: 10px; margin-bottom: 10px; line-height: 1.6;\">\n\n<span style=\"font-weight: bold;\">🔥 Fast Heating</span> – Heats up quickly in around 30 seconds for faster styling.<br><br>\n\n<span style=\"font-weight: bold;\">💫 Automatic Rotating Design</span> – Helps create smooth curls easily with less effort.<br><br>\n\n<span style=\"font-weight: bold;\">🌡️ 3 Temperature Settings</span> – Choose the right heat level for different hair types and styling needs.<br><br>\n\n<span style=\"font-weight: bold;\">🛡️ Anti-Scald & Anti-Tangle</span> – Designed for safer, smoother styling with less pulling and tangling.<br><br>\n\n<span style=\"font-weight: bold;\">⏱️ Automatic Shut-Off</span> – Added safety feature for extra peace of mind.\n\n</div>"
           }
         },
         "variant_picker": {
@@ -96,18 +90,9 @@
           "settings": {
             "show_quantity_selector": false
           }
-        },
-        "collapsible_description_mFEEde": {
-          "type": "collapsible_description",
-          "settings": {
-            "icon": "heart",
-            "heading": "Description",
-            "keep_open": false
-          }
         }
       },
       "block_order": [
-        "custom_liquid_Q4eMAn",
         "title",
         "rating",
         "price",
@@ -117,8 +102,7 @@
         "buy_buttons",
         "custom_liquid_wbDEGx",
         "related_buttons",
-        "sticky_cart",
-        "collapsible_description_mFEEde"
+        "sticky_cart"
       ],
       "custom_css": [
         ".product-form__submit {animation: shopifyshake 4s; animation-iteration-count: infinite;}"
@@ -140,8 +124,173 @@
         "padding_bottom": 72
       }
     },
+    "scrolling_promotion_MkjqYJ": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_XtEdfT": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "Perfect Curls, Effortlessly",
+            "text_size": 20,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_XtEdfT"
+      ],
+      "name": "t:sections.scrolling-promotion.presets.name",
+      "settings": {
+        "direction": "left",
+        "speed": 1.6,
+        "show_divider": false,
+        "use_custom_colors": true,
+        "colors_icon": "#ffffff",
+        "colors_text": "#FFFFFF",
+        "colors_background": "#EEADB3",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_AiMCYj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yRjRCN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Salon-Quality Curls at Home",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_i4EjKX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Create beautiful, long-lasting curls effortlessly with the Automatic Rotating Curling Iron. Its smart rotating design and fast heating technology help you achieve professional results in minutes, right from the comfort of your home.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_yRjRCN",
+        "text_i4EjKX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1780576337_phpq91ou9f2j7vq4QNFcvR.png",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "scrolling_promotion_6gyzmh": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_9fJALi": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "Perfect Curls, Effortlessly",
+            "text_size": 20,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_9fJALi"
+      ],
+      "name": "t:sections.scrolling-promotion.presets.name",
+      "settings": {
+        "direction": "left",
+        "speed": 1.6,
+        "show_divider": false,
+        "use_custom_colors": true,
+        "colors_icon": "#ffffff",
+        "colors_text": "#FFFFFF",
+        "colors_background": "#EEADB3",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_aiHCDN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KVhmW8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Safe, Fast & Easy Styling",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_f8PVRf": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>Designed with anti-scald and anti-tangle technology, this curling iron makes styling safer and more convenient. With three adjustable temperature settings, it works perfectly for all hair types while delivering smooth, shiny curls every time.<br/><br/></p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KVhmW8",
+        "text_f8PVRf"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1780576337_php08kuih1b3h1obn1BvOt.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "product_list_limit": 4,
         "show_divider": false,
@@ -165,8 +314,76 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_98Gxyb": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.benefits-table {\n  max-width: 800px;\n  margin: 30px auto;\n  border-radius: 16px;\n  overflow: hidden;\n  box-shadow: 0 4px 15px rgba(0,0,0,0.08);\n  font-family: Arial, sans-serif;\n}\n\n.benefits-table table {\n  width: 100%;\n  border-collapse: collapse;\n}\n\n.benefits-table th {\n  background: #EEADB3;\n  color: white;\n  padding: 16px;\n  font-size: 17px;\n  text-align: center;\n}\n\n.benefits-table td {\n  padding: 15px;\n  border-bottom: 1px solid #f1f1f1;\n  font-size: 15px;\n  text-align: center;\n}\n\n.benefits-table td:first-child {\n  text-align: left;\n  font-weight: 600;\n  color: #333;\n}\n\n.benefits-table tr:nth-child(even) {\n  background: #fafafa;\n}\n\n.yes {\n  color: #2eaf5d;\n  font-weight: bold;\n}\n\n.no {\n  color: #d9534f;\n  font-weight: bold;\n}\n\n@media (max-width: 600px) {\n  .benefits-table th,\n  .benefits-table td {\n    padding: 10px 6px;\n    font-size: 13px;\n  }\n}\n</style>\n\n<div class=\"benefits-table\">\n  <table>\n    <thead>\n      <tr>\n        <th>Benefit</th>\n        <th>Our Curler</th>\n        <th>Traditional Curler</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Automatic Rotating</td>\n        <td class=\"yes\">YES</td>\n        <td class=\"no\">NO</td>\n      </tr>\n      <tr>\n        <td>Fast Heating</td>\n        <td class=\"yes\">YES</td>\n        <td class=\"yes\">YES</td>\n      </tr>\n      <tr>\n        <td>Anti-Tangle Design</td>\n        <td class=\"yes\">YES</td>\n        <td class=\"no\">NO</td>\n      </tr>\n      <tr>\n        <td>Anti-Scald Protection</td>\n        <td class=\"yes\">YES</td>\n        <td class=\"no\">NO</td>\n      </tr>\n      <tr>\n        <td>Easy Styling</td>\n        <td class=\"yes\">YES</td>\n        <td class=\"no\">NO</td>\n      </tr>\n      <tr>\n        <td>Auto Shut-Off</td>\n        <td class=\"yes\">YES</td>\n        <td class=\"no\">NO</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_4jCV6z": {
+      "type": "faq",
+      "blocks": {
+        "question_DwMfAd": {
+          "type": "question",
+          "settings": {
+            "title": "Is the curling iron easy to use?",
+            "text": "<p>Yes, it is designed for <strong>easy and effortless styling</strong>.</p>"
+          }
+        },
+        "question_PTfHT4": {
+          "type": "question",
+          "settings": {
+            "title": "Does it heat quickly?",
+            "text": "<p>Yes, it heats fast to help you style your hair quicker.</p>"
+          }
+        },
+        "question_fnRikF": {
+          "type": "question",
+          "settings": {
+            "title": "Is the product high quality?",
+            "text": "<p>Yes, we offer carefully selected <strong>high-quality beauty products</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_DwMfAd",
+        "question_PTfHT4",
+        "question_fnRikF"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1771945068374140eb": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8iHAAD": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8iHAAD"
+      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -234,7 +451,13 @@
   "order": [
     "empty-space",
     "main",
+    "scrolling_promotion_MkjqYJ",
+    "image_with_text_AiMCYj",
+    "scrolling_promotion_6gyzmh",
+    "image_with_text_aiHCDN",
     "product-recommendations",
+    "custom_liquid_98Gxyb",
+    "faq_4jCV6z",
     "1771945068374140eb",
     "guarantees_Yj7NaV",
     "1771850465e38b72c3"
